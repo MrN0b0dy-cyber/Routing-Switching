@@ -1,0 +1,148 @@
+Certamente! Aqui está uma lista abrangente de comandos Cisco usados para solucionar problemas (troubleshooting) em redes. Esses comandos são essenciais para diagnosticar e resolver problemas em dispositivos Cisco, como roteadores e switches.
+
+Comandos Básicos de Diagnóstico
+ping [endereço]
+
+Testa a conectividade entre seu dispositivo e o destino especificado.
+Exemplo: ping 192.168.1.1
+traceroute [endereço]
+
+Mostra o caminho dos pacotes até o destino e identifica onde ocorrem atrasos ou falhas.
+Exemplo: traceroute 8.8.8.8
+show ip interface brief
+
+Mostra um resumo do status de todas as interfaces IP, incluindo se estão ativas e se possuem endereços IP atribuídos.
+Exemplo: show ip interface brief
+show interfaces
+
+Fornece informações detalhadas sobre o status das interfaces, incluindo estatísticas de tráfego e erros.
+Exemplo: show interfaces GigabitEthernet0/1
+show ip route
+
+Exibe a tabela de roteamento IP, mostrando as rotas conhecidas pelo dispositivo.
+Exemplo: show ip route
+show arp
+
+Mostra a tabela ARP (Address Resolution Protocol) que mapeia endereços IP para endereços MAC.
+Exemplo: show arp
+show running-config
+
+
+
+Ver informação BGP IP
+show ip bgp neighbors 172.0.0.1
+
+
+Este comando mostra as rotas BGP que o peer está anunciando.
+show ip bgp neighbors [endereço IP do peer] advertised-routes
+
+
+
+Este comando exibe as rotas que foram recebidas do peer.
+show ip bgp neighbors [endereço IP do peer] received-routes
+
+
+Exibe a configuração atual em execução no dispositivo.
+Exemplo: show running-config
+show startup-config
+
+Mostra a configuração salva na memória de inicialização.
+Exemplo: show startup-config
+show log
+
+Mostra o conteúdo do buffer de log do dispositivo, útil para ver mensagens e eventos registrados.
+Exemplo: show log
+show version
+
+Exibe informações sobre o sistema operacional, versão do software e detalhes do hardware do dispositivo.
+Exemplo: show version
+Comandos de Diagnóstico de Roteamento
+show ip ospf neighbor
+
+Mostra o status dos vizinhos OSPF (Open Shortest Path First).
+Exemplo: show ip ospf neighbor
+
+show ip eigrp neighbors
+
+Exibe informações sobre os vizinhos EIGRP (Enhanced Interior Gateway Routing Protocol).
+Exemplo: show ip eigrp neighbors
+show ip bgp summary
+
+Fornece um resumo das sessões BGP (Border Gateway Protocol) e suas rotas.
+Exemplo: show ip bgp summary
+debug ip ospf events
+
+Ativa o debug para eventos OSPF, útil para troubleshooting de OSPF.
+Exemplo: debug ip ospf events
+debug ip eigrp packets
+
+Ativa o debug para pacotes EIGRP.
+Exemplo: debug ip eigrp packets
+debug ip bgp
+
+Ativa o debug para BGP.
+Exemplo: debug ip bgp
+Comandos de Diagnóstico de VLAN e Switch
+show vlan brief
+
+Exibe um resumo das VLANs configuradas no switch.
+Exemplo: show vlan brief
+show spanning-tree
+
+Mostra informações sobre o estado da Spanning Tree Protocol (STP) e as raízes de ponte.
+Exemplo: show spanning-tree
+show mac address-table
+
+Exibe a tabela de endereços MAC que o switch aprendeu.
+Exemplo: show mac address-table
+show interface status
+
+Fornece o status e a configuração das interfaces do switch.
+Exemplo: show interface status
+show interface trunk
+
+Mostra as interfaces de trunk e suas VLANs permitidas.
+Exemplo: show interface trunk
+Comandos de Segurança e Troubleshooting de Acesso
+show access-lists
+
+Exibe as listas de controle de acesso (ACLs) configuradas no dispositivo.
+Exemplo: show access-lists
+show ip access-list
+
+Fornece uma visão detalhada das ACLs IP.
+Exemplo: show ip access-list
+show port-security
+
+Mostra informações sobre a segurança de portas em switches.
+Exemplo: show port-security
+show interface [interface] counters errors
+
+Exibe contadores de erros para uma interface específica, ajudando a diagnosticar problemas de desempenho.
+Exemplo: show interface GigabitEthernet0/1 counters errors
+Comandos de Configuração e Monitoramento
+configure terminal
+
+Entra no modo de configuração global para modificar a configuração do dispositivo.
+Exemplo: configure terminal
+show ip interface brief
+
+Exibe uma visão geral rápida do status das interfaces IP.
+Exemplo: show ip interface brief
+show protocols
+
+Mostra o status dos protocolos de rede e suas configurações.
+Exemplo: show protocols
+Comandos de Debugging
+debug ip packet
+
+Ativa o debug para pacotes IP, útil para investigar problemas de tráfego.
+Exemplo: debug ip packet
+debug interface [interface]
+
+Ativa o debug para uma interface específica.
+Exemplo: debug interface GigabitEthernet0/1
+debug ip routing
+
+Ativa o debug para eventos de roteamento IP.
+Exemplo: debug ip routing

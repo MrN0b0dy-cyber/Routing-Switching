@@ -1,0 +1,135 @@
+
+
+
+
+Comandos Gerais de Troubleshooting
+Verificar a Conectividade Básica:
+
+Ping:
+
+
+ping <endereço-ip>
+Testa a conectividade com um endereço IP específico.
+Traceroute:
+
+
+traceroute <endereço-ip>
+Exibe o caminho que os pacotes seguem até o destino.
+Verificar Interfaces e Links:
+
+Status da Interface:
+
+
+show interfaces
+Exibe o status e estatísticas de todas as interfaces.
+Status da Interface Específica:
+
+
+show interfaces <interface-name>
+Substitua <interface-name> pelo nome da interface específica para ver detalhes sobre ela.
+Verificar Tabela de Roteamento:
+
+Tabela de Roteamento IP:
+
+
+show ip route
+Mostra todas as rotas IP na tabela de roteamento.
+Tabela de Roteamento IPv6:
+
+
+show ipv6 route
+Verificar Protocolos de Roteamento:
+
+Estado do OSPF:
+
+
+show ip ospf neighbor
+Exibe o estado dos vizinhos OSPF.
+Base de Dados OSPF:
+
+
+show ip ospf database
+Estado do BGP:
+
+
+show ip bgp summary
+Fornece um resumo das sessões BGP e informações sobre os vizinhos.
+Rotas BGP Recebidas:
+
+
+show ip bgp neighbor <ip-address> received-routes
+Substitua <ip-address> pelo IP do vizinho BGP para mostrar as rotas recebidas.
+Rotas BGP Anunciadas:
+
+
+show ip bgp neighbor <ip-address> advertised-routes
+Substitua <ip-address> pelo IP do vizinho BGP para mostrar as rotas anunciadas.
+Verificar Logs e Eventos do Sistema:
+
+Logs do Sistema:
+
+
+show log
+Exibe o log do sistema para eventos e erros.
+Logs de Protocolos Específicos:
+
+
+show log | include <protocol>
+Substitua <protocol> por ospf, bgp, etc., para filtrar logs específicos.
+Verificar Estado do Sistema:
+
+Uso da CPU e Memória:
+
+
+show cpu-usage
+show memory
+Informações do Sistema:
+
+
+show version
+show uptime
+Verificar e Diagnosticar Problemas de Roteamento:
+
+Verificar a Rota para um Destino Específico:
+
+
+show ip route <destino>
+Verificar Detalhes de uma Rota Específica:
+
+
+show ip route <prefix> detail
+Substitua <prefix> pelo prefixo IP para obter detalhes sobre a rota.
+Exemplos Práticos
+Aqui estão alguns exemplos de uso dos comandos:
+
+Exemplo 1: Verificar se a interface GigabitEthernet0/1 está ativa e funcionando:
+
+
+
+show interfaces GigabitEthernet0/1
+ Verificar as rotas recebidas do vizinho BGP com IP 192.168.1.1:
+
+
+show ip bgp neighbor 192.168.1.1 received-routes
+Mostrar todas as rotas IP na tabela de roteamento:
+
+
+show ip route
+Exemplo 4: Verificar os logs do sistema para mensagens relacionadas ao OSPF:
+
+
+show log | include ospf
+
+
+
+
+
+Verificar Rotas Recebidas pelo BGP:
+
+show ip bgp neighbor <ip-address> received-routes
+
+
+
+Mostrar Rotas Anunciadas:
+
+show ip bgp neighbor <ip-address> advertised-routes
