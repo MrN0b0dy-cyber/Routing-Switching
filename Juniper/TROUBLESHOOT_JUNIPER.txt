@@ -1,4 +1,5 @@
-Comandos Gerais de Troubleshooting
+##Comandos Gerais de Troubleshooting
+
 Verificar a Conectividade Básica:
 
 Ping:
