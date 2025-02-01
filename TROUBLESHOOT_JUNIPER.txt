@@ -1,0 +1,174 @@
+Comandos Gerais de Troubleshooting
+Verificar a Conectividade Básica:
+
+Ping:
+
+#Se estiver no modo config use run ping, run traceroute etc
+
+
+ping <endereço-ip>
+Testa a conectividade com um endereço IP.
+Traceroute:
+
+
+traceroute <endereço-ip>
+Exibe o caminho que os pacotes seguem até o destino.
+Verificar Interfaces e Links:
+
+Status da Interface:
+
+
+show interfaces <interface-name>
+Exibe o status e estatísticas da interface.
+Verificar Interfaces de VLAN:
+
+
+show interfaces vlan <vlan-id>
+Verificar Tabela de Roteamento:
+
+Tabela de Roteamento Geral:
+
+
+show route
+Mostra todas as rotas na tabela de roteamento.
+Tabela de Roteamento OSPF:
+
+
+show route protocol ospf
+Tabela de Roteamento BGP:
+
+
+show route protocol bgp
+Verificar Protocolos de Roteamento:
+
+Estado do OSPF:
+
+
+show ospf neighbor
+Exibe o estado dos vizinhos OSPF.
+Base de Dados OSPF:
+
+
+show ospf database
+
+Estado do BGP:
+
+
+show bgp summary
+Sessões BGP:
+
+
+show bgp neighbor
+Verificar Logs e Eventos do Sistema:
+
+Logs do Sistema:
+
+
+show log messages
+Exibe os logs do sistema para eventos e erros.
+Logs Específicos de OSPF:
+
+
+show log ospf
+Logs Específicos de BGP:
+
+
+show log bgp
+Verificar Estado do Sistema:
+
+Uso da CPU e Memória:
+
+
+show system processes
+show system memory
+Informações do Sistema:
+
+
+show system uptime
+show version
+Verificar e Diagnosticar Problemas de Roteamento:
+
+Verificar a Tabela de Roteamento de IP:
+
+
+show route protocol inet
+Verificar a Tabela de Roteamento IPv6:
+
+
+show route protocol inet6
+Verificar Conectividade e Caminho de Dados:
+
+Ping com Tamanho de Pacote Específico:
+
+
+ping <endereço-ip> size <tamanho>
+Ping Traceroute:
+
+
+traceroute <endereço-ip> size <tamanho>
+Comandos de Configuração de Troubleshooting
+Verificar Configuração de Interface:
+
+Mostrar Configuração de Interface:
+
+show configuration interfaces <interface-name>
+Verificar Configuração de Protocolos:
+
+Mostrar Configuração OSPF:
+
+
+show configuration protocols ospf
+Mostrar Configuração BGP:
+
+
+show configuration protocols bgp
+Exemplos de Comandos para Diagnóstico de Problemas Específicos
+Problemas de Conectividade:
+
+Verificar se a interface está ativa e em funcionamento:
+
+
+show interfaces terse
+Verificar erros e contadores de interface:
+
+
+show interfaces <interface-name> extensive
+Problemas de Roteamento:
+
+Verificar a rota para um destino específico:
+
+
+show route <destino>
+
+Verificar a origem da rota e detalhes:
+
+
+show route detail <destino>
+
+Problemas de Protocolos de Roteamento:
+
+
+Verificar o estado da conexão BGP e rotas BGP recebidas:
+
+
+show bgp neighbor <ip-address> routes
+
+Verificar o estado do OSPF e vizinhos OSPF:
+
+show ospf interface
+
+
+
+
+Verificar Rotas Recebidas pelo BGP:
+
+Este comando exibe as rotas BGP recebidas de um vizinho específico.
+
+show bgp neighbor <ip-address> received-routes
+Substitua <ip-address> pelo endereço IP do vizinho BGP específico.
+
+Verificar Rotas Enviadas pelo BGP:
+
+Este comando mostra as rotas BGP que foram enviadas para um vizinho específico.
+
+show bgp neighbor <ip-address> advertised-routes
